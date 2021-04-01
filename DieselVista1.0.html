@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diesel a vista</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diesel a vista</h1>
+    Valor do abastecimento </br>
+    <input type= 'number' name="txtn1" id="txtn1"></br> <!--valor do abastecimento -->
+    Preço a vista</br>
+    <input type= 'number' name="txtn2" id="txtn2">      <!--preço do cobustivel a vista-->
+    <input type= 'button' value="Calcular" onclick="calcular()"><!--botao para calcular-->
+    <div id= "res">Resultado</div> <!--Resultado do calculo-->
+    <script>
+        function calcular(){
+            var tn1 = window.document.getElementById('txtn1') //buscando txt 1
+            var tn2 = window.document.getElementById('txtn2') //buscando txt 2
+            var res = window.document.getElementById('res') //mostra resultado na div
+            var n1 = Number(tn1.value) //valor do txt1
+            var n2 = Number(tn2.value) //valor n2
+            var s = (n1 / n2).toFixed(2) //soma dos valores
+            res.innerHTML = `Abastecer <strong>${s}</strong> litros!`
+        }
+    </script>
+        <a href="index.html"> <input type= 'button' value="Voltar" > </a>
+        
+</body>
+</html>

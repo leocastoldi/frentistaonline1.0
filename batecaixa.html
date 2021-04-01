@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bate Caixa</title>
+<link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Bate Caixa</h1>
+        
+    </header>
+    <section>
+        <div>
+            <br>Numero da Venda: <input type="number" name="txtven" id="txtven">
+            <br>Valor  da Venda: <input type="number" name="txtval" id="txtval">
+            <p>Tipo de Pagamento: <br>
+                 <input type="radio" name="radtip" id="Dinheiro" checked>
+                 <label for="Dinheiro">Dinheiro</label>
+                 <input type="radio" name="radtip" id="Cartão">
+                 <label for="Cartão">Cartão</label>
+                 <input type="radio" name="radtip" id="Prazo">
+                 <label for="Prazo">Prazo</label>
+                 <input type="radio" name="radtip" id="Cheque">
+                 <label for="Cheque">Cheque</label>
+            </p>
+            <input type="button" value="Cadastrar" onclick="cadastrar()" > <br>
+
+            <br><select name="selven" id="selven" size="10" width= 150px onchange="valorselicionado(this)"></select> <br>
+
+            <br><input type="button" value="Finalizar" onclick="finalizar()" >
+            <input type="button" value="Excluir"onclick="excluir()">
+            <input type="button" value="Cadastrar cheque troco" onclick="chequetroco()"
+
+        </div>
+        <div id="res">
+            
+        </div>
+        <a href="index.html"> <button>Voltar</button> </a>
+    </section>
+    <footer>
+        <p>&copy;LionKA</p>
+    </footer>
+    <script src="batecaixa_script.js"></script>
+</body>
+</html>
